@@ -50,8 +50,9 @@ superstore-analytics/
 ## 📊 Dataset
 
 - **Source:** [Kaggle – Superstore Sales Dataset](https://www.kaggle.com/datasets/vivek468/superstore-dataset-final)
-- **Rows:** ~10,000 orders
+- **Rows:** 9,986 (after cleaning)
 - **Key fields:** Order ID, Order Date, Ship Date, Customer Segment, Region, Category, Sub-Category, Sales, Quantity, Discount, Profit
+- **Date range:** January 2014 – December 2017
 
 ---
 
@@ -60,37 +61,46 @@ superstore-analytics/
 ### 1. Schema & Ingestion (`01_schema.sql`)
 - Define table schema with appropriate data types
 - Load raw CSV into PostgreSQL
+- Handle encoding (LATIN1) and date format (MM/DD/YYYY) issues
 
 ### 2. Exploration (`02_explore.sql`)
 - Row counts, null checks, duplicate detection
 - Distribution of key numeric fields (Sales, Profit, Discount)
 - Date range validation
+- Distinct value checks on categorical columns
 
 ### 3. Cleaning (`03_clean.sql`)
-- Handle nulls and inconsistent categorical values
-- Remove duplicate rows
-- Standardise date formats
-- Flag and investigate negative profit records
+- Created `superstore_clean` table preserving raw data
+- Removed 8 duplicate order/product rows
+- Fixed 16 whitespace issues in text columns
+- Confirmed 1,870 negative profit rows as legitimate business losses
 
 ### 4. Analysis (`04_analyse.sql`)
+- Overall business KPIs
 - Profitability by region, category, and sub-category
-- Discount impact analysis
+- Discount impact analysis by discount bucket
+- Year-over-year sales and profit trends
 - Customer segment performance
-- Year-over-year sales trends
-- SQL views created for Power BI consumption
 
 ### 5. Visualisation (Power BI)
 - Executive summary dashboard (KPIs: Total Sales, Total Profit, Profit Margin)
 - Regional performance map
 - Category/Sub-category profitability breakdown
-- Discount vs. Profit scatter analysis
+- Discount vs. Profit analysis
 - Customer segment comparison
+- Year-over-year trend lines
 
 ---
 
 ## 💡 Key Findings
 
-> _To be updated upon project completion._
+- **Overall performance:** $2.3M in sales and $286K profit over 4 years at a 12.46% margin across 5,009 orders and 793 customers
+- **Regional insight:** The West region leads with a 14.95% margin while Central significantly underperforms at just 7.92% despite generating $501K in sales
+- **Category insight:** Technology and Office Supplies both achieve ~17% margins while Furniture is nearly breaking even at just 2.48%
+- **Sub-category insight:** Tables are actively loss-making at -8.56% margin, losing $17K on $207K of sales — the single biggest drag on profitability
+- **Discount tipping point:** Orders with discounts above 20% generate negative profit margins. 1,392 orders (14% of all orders) fall into this category, collectively losing $135K in profit
+- **Growth trend:** Sales grew 51% from 2014 to 2017 with profit nearly doubling, though margin dipped slightly in 2017 — a trend worth monitoring
+- **Best segment:** Home Office customers deliver the highest margin at 14.03% despite being the smallest segment by volume
 
 ---
 
@@ -107,4 +117,3 @@ superstore-analytics/
 ## 👩‍💻 Author
 
 **Sneha** — Data Analyst | MSc Business Analytics, University College Cork  
-[LinkedIn](#) · [GitHub](#) · [Portfolio](#)
