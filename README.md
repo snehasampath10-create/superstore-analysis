@@ -31,7 +31,7 @@ superstore-analytics/
 ├── sql/
 │   ├── 01_schema.sql             # Table creation and data loading
 │   ├── 02_explore.sql            # Exploratory queries (nulls, distributions, ranges)
-│   ├── 03_clean.sql              # Data cleaning and transformation
+│   ├── 03_cleaning.sql              # Data cleaning and transformation
 │   └── 04_analyse.sql            # Analytical queries and views
 ├── powerbi/
 │   └── superstore_dashboard.pbix # Power BI report file
@@ -75,7 +75,7 @@ superstore-analytics/
 - Date range validation
 - Distinct value checks on categorical columns
 
-### 3. Cleaning (`03_clean.sql`)
+### 3. Cleaning (`03_cleaning.sql`)
 - Created `superstore_clean` table preserving raw data
 - Removed 8 duplicate order/product rows
 - Fixed 16 whitespace issues in text columns
