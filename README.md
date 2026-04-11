@@ -16,6 +16,12 @@ This project analyses the Global Superstore dataset — a fictional retail busin
 
 ---
 
+## 📸 Dashboard Preview
+
+![Dashboard Overview](screenshots/dashboard_overview.png)
+
+---
+
 ## 🗂️ Repository Structure
 
 ```
@@ -30,7 +36,7 @@ superstore-analytics/
 ├── powerbi/
 │   └── superstore_dashboard.pbix # Power BI report file
 ├── screenshots/
-│   └── dashboard_overview.png    # Dashboard preview for README
+│   └── dashboard_overview.png    # Dashboard preview
 └── README.md
 ```
 
@@ -84,11 +90,11 @@ superstore-analytics/
 
 ### 5. Visualisation (Power BI)
 - Executive summary dashboard (KPIs: Total Sales, Total Profit, Profit Margin)
-- Regional performance map
-- Category/Sub-category profitability breakdown
-- Discount vs. Profit analysis
-- Customer segment comparison
-- Year-over-year trend lines
+- Regional performance bar chart
+- Category profitability breakdown with conditional formatting
+- Discount vs. Profit analysis with red/blue conditional coloring
+- Customer segment donut chart
+- Year-over-year sales trend line
 
 ---
 
@@ -117,3 +123,4 @@ superstore-analytics/
 ## 👩‍💻 Author
 
 **Sneha** — Data Analyst | MSc Business Analytics, University College Cork  
+[LinkedIn](https://linkedin.com/in/sneha-sampath-/)
