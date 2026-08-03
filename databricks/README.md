@@ -89,4 +89,5 @@ Connected via a Databricks SQL Warehouse (Server Hostname + HTTP Path + Personal
 ## 👩‍💻 Author
 
 **Sneha** — Data Analyst | MSc Business Analytics, University College Cork
+
 [LinkedIn](https://linkedin.com/in/sneha-sampath-/)
