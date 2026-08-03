@@ -64,7 +64,7 @@ Full details are in [`docs/Superstore_Gold_Layer_Summary.docx`](docs/Superstore_
 
 ## 📊 Power BI Dashboard
 
-![Dashboard Preview](screenshots/dashboard_overview.png)
+![Dashboard Preview](screenshots/dashboard_overview_databricks.png)
 
 Connected via a Databricks SQL Warehouse (Server Hostname + HTTP Path + Personal Access Token, `BI Tools`/`sql` scope), Import mode, all three Gold tables loaded directly.
 
