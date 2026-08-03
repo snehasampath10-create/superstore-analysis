@@ -16,6 +16,16 @@ This project analyses the Global Superstore dataset — a fictional retail busin
 
 ---
 
+## 🧱 Related Project: Databricks Medallion Pipeline
+
+This repo also contains a second, more advanced take on the same dataset: a full **Bronze → Silver → Gold medallion architecture pipeline** built in Databricks (Free Edition, Unity Catalog), with its own Power BI dashboard connected directly to the Gold layer via a SQL Warehouse.
+
+Where the SQL/Power BI project above focuses on cleaning and analysis in a single relational database, this pipeline demonstrates a layered, production-style data engineering approach — including a genuine data-quality investigation (a non-unique `Order_ID` collision across markets) caught and fixed mid-build.
+
+📂 See [`databricks/`](databricks/) for the full write-up, notebook, and dashboard.
+
+---
+
 ## 📸 Dashboard Preview
 
 ![Dashboard Overview](screenshots/dashboard_overview.png)
@@ -37,6 +47,12 @@ superstore-analytics/
 │   └── superstore_dashboard.pbix # Power BI report file
 ├── screenshots/
 │   └── dashboard_overview.png    # Dashboard preview
+├── databricks/
+│   ├── notebooks/
+│   │   └── superstore_medallion_pipeline.ipynb   # Bronze → Silver → Gold pipeline
+│   ├── docs/
+│   │   └── Superstore_Gold_Layer_Summary.docx    # Detailed project write-up
+│   └── README.md                 # Databricks project documentation
 └── README.md
 ```
 
@@ -118,9 +134,11 @@ superstore-analytics/
 4. Run SQL scripts in order: `01` → `02` → `03` → `04`
 5. Open `superstore_dashboard.pbix` in Power BI Desktop and update the PostgreSQL connection string
 
+For the Databricks medallion pipeline, see [`databricks/README.md`](databricks/README.md).
+
 ---
 
 ## 👩‍💻 Author
 
-**Sneha** — Data Analyst | MSc Business Analytics, University College Cork  
+**Sneha** — Data Analyst | MSc Business Analytics, University College Cork
 [LinkedIn](https://linkedin.com/in/sneha-sampath-/)
